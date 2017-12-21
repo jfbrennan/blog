@@ -32,14 +32,10 @@ And if they render without working JavaScript, then they’d certainly render wi
 # Custom HTML Tags
 Now that we’re IE11+ it makes a lot of sense to consider custom HTML tags.
 
-You’ll soon see an example of our first custom tag on the Doc Site:
-```
-<uitk-loader></uitk-loader>
-```
-This replaces the older Loader implementation, which looked like:
-```
-<span class="loader"></span>
-```
+You’ll soon see an example of our first custom tag on the Doc Site: `<uitk-loader></uitk-loader>`
+
+This replaces the older Loader implementation, which looked like: `<span class="loader"></span>`
+
 This new tag approach is just HTML. Really, plain old HTML. There’s no 3rd-party library or polyfill to download, no UITK magic or Handlebars abstraction, no hacks, nothing. It’s a custom or “unknown” HTML tag and browsers will download, parse, and style them like normal tags and we think they’re a great approach to these micro components.
 
 Here’s what a few others would look like:
@@ -48,7 +44,8 @@ Here’s what a few others would look like:
 <uitk-row>...</uitk-row>
 <uitk-icon></uitk-icon>
 ```
-No doubt you’ve noticed two differences here compared to current UITK: prefixed tag names and no classes.
+No doubt you’ve noticed two differences here compared to current UITK: 
+prefixed tag names and no classes
 
 Prefixed tags are required for WebComponents, but not custom tags. We’re going to follow this rule anyway because it’s a good practice and will make it possible for a custom tag to grow up and become a real WebComponent while still remaining backwards-compatible, and the prefix stands out nicely when looking at code, “That’s clearly a UITK component right there!”
 
@@ -73,7 +70,8 @@ Classes are good, but custom tags are just…better. Some differences between cu
 
 <!-- Even better --> 
 <uitk-box>...</uitk-box>
-Cleaner code and a clear API:
+```
+**Cleaner code and a clear API:**
 ```
 <i class="icon icon-traveler"></i> 
 
@@ -81,11 +79,11 @@ Cleaner code and a clear API:
 
 <uitk-icon name="traveler"></uitk-icon>
 ```
-Custom attributes really open up a lot of possibilities:
+**Custom attributes** really open up a lot of possibilities:
 ```
 <uitk-badge count="1"></uitk-badge>
 ```
-🏆 Bonus points if you leave a comment explaining how Badge’s count displays without JavaScript
+🏆 _Bonus points if you leave a comment explaining how Badge’s count displays without JavaScript_
 
 That same example above could easily evolve into a WebComponent without requiring any refactoring. Check it out:
 
