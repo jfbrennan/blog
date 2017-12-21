@@ -1,7 +1,7 @@
 ## &lt;uitk-loader&gt; and Custom HTML Tags
 
 # Intro
-Product Design recently asked for a new version of the UITK Loader and since we had just finished The View Showdown (more on that in a future post), we were curious to see how it could be built with one of the newer view libraries like React.
+Product Design recently asked for a new version of the UITK Loader and since we had just finished The View Showdown (more on that in a future post), we were curious to see how it could be built with one of the newer view libraries.
 
 We already rebuilt UITK Alert with these libraries as a POC, so we knew what it took for a medium-sized component, but we hadn’t tried to create a small component like Loader. It became apparent that the solution in every case would unfortunately be over-engineered.
 
@@ -93,9 +93,22 @@ v1, custom tag:
 ```
 <uitk-badge count="1"></uitk-badge>
 ```
+v2, uitk-badge becomes a WebComponent and exposes more functionality:
+```
+<!-- Valid WebComponent, still works, no impact after v2 is released -->
+<uitk-badge count="1"></uitk-badge>
 
+<!-- Begin using new API if desired -->
+badge.updateCount(2);
+badge.clear();
+```
+Are you starting to see the value here?
 
+One other nice benefit is all your existing tooling still works: syntax highlighting, Emmet (hope you’re using it!), other IDE tools, testing tools, and all browsers’ developer tools (no Chrome-only plugins required like some libraries).
 
+In summary, we can create high-level component APIs using the most basic web technology – HTML – instead of over-engineering with the flavor-of-the-day.
+
+# So then, what about all those view libraries?
 
 
 
