@@ -12,9 +12,9 @@ This is what the JavaScript world looks like to me:
 
 Hyper. Chaotic. Like an insatiable mutt running back and forth revisiting places like its never been there before. 
 
-The view space is no exception (probably the worst). The trouble with these new libraries is when you have something that isn’t a component, something like UITK’s Loader. It’s definitely a UI “thing”, it has a unique identity and purpose, but it doesn’t really do anything, not anything substantial. Loader is like a micro component.
+The view space is no exception; it's probably the worst right now. The trouble with these new libraries is when you have something that isn’t a typical component, something like UITK’s Loader. It’s definitely a UI “thing”, it has a unique identity and purpose, but it doesn’t really do anything, not anything substantial. Loader is like a micro component.
 
-In a React app you “component all the things!” so a Loader would be definitely be done as React component (numerous examples online, BEX included). No one in the React community frowns upon 10, 20, or 60 lines (true story) of JavaScript just to produce a single <span>, which is all a Loader is. There’s even a special React API for these “pure” components and like cocaine, the "pure" version is even more dangerous!
+In a React app you “component all the things!”, so a Loader would be definitely be done as React component (numerous examples online, BEX included). No one in the React community frowns upon 10, 20, or 60 lines (true story) of JavaScript just to produce a single <span>, which is all a Loader is. There’s even a special React API for these “pure” components and like cocaine, the "pure" version is even more dangerous!
   
   
 #### _“Just say NO to ~~drugs~~ over-engineering!”_
@@ -28,7 +28,7 @@ While rebuilding Alert with Polymer, Slim, and Riot I noticed that, despite me f
 
 ![Image](src)
 
-And if they render without working JavaScript, then they’d certainly render with no JavaScript at all, which means we’d be back to basic HTML and CSS, but with the look of a true component. Except it wouldn’t be a React component or even a WebComponent – it’d simply be a custom HTML tag.
+And if they render without working JavaScript, then they’d certainly render with no JavaScript at all, which means we’re back to basic HTML and CSS, but with the look of a true component. Except it wouldn’t be a React component or even a WebComponent – it’d simply be a custom HTML tag.
 
 # Custom HTML Tags
 Now that we’re IE11+ it makes a lot of sense to consider custom HTML tags.
