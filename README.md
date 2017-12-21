@@ -10,12 +10,12 @@ This is what the JavaScript world looks like to me:
 
 ![Image](src)
 
-Hyper. Chaotic. Like an insatiable mutt running back and forth revisiting places like its never been there before.
+Hyper. Chaotic. Like an insatiable mutt running back and forth revisiting places like its never been there before. 
 
-The trouble comes when you’re using one of these new libraries and you have something that isn’t a component, something like UITK’s Loader. It’s definitely a UI “thing”, it has a unique identity and purpose, but it doesn’t really do anything, not anything substantial. Loader is like a micro component.
+The view space is no exception (probably the worst). The trouble with these new libraries is when you have something that isn’t a component, something like UITK’s Loader. It’s definitely a UI “thing”, it has a unique identity and purpose, but it doesn’t really do anything, not anything substantial. Loader is like a micro component.
 
-In the React world you “component all the things!” so a Loader would be done in React (numerous examples online, BEX as well). No one in the React community frowns upon 10, 20, or 60 lines (seriously.) of JavaScript just to produce a single <span>, which is what Loader is. There’s even a special React API for these “pure” components. This is not good.
-
+In a React app you “component all the things!” so a Loader would be definitely be done as React component (numerous examples online, BEX included). No one in the React community frowns upon 10, 20, or 60 lines (seriously.) of JavaScript just to produce a single <span>, which is all a Loader is. There’s even a special React API for these “pure” components and like cocaine, the "pure" version is even more dangerous!
+  
 _“Just say NO to ~~drugs~~ over-engineering!”_
 
 -McGruff, the Engineering Dog
