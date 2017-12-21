@@ -36,7 +36,9 @@ You’ll soon see an example of our first custom tag on the Doc Site: `<uitk-loa
 
 This replaces the older Loader implementation, which looked like: `<span class="loader"></span>`
 
-This new tag approach is just HTML. Really, plain old HTML. There’s no 3rd-party library or polyfill to download, no UITK magic or Handlebars abstraction, no hacks, nothing. It’s a custom or “unknown” HTML tag and browsers will download, parse, and style them like normal tags and we think they’re a great approach to these micro components.
+This new tag approach is just HTML. There’s no 3rd-party library or polyfill to download, no UITK magic or Handlebars abstraction, no hacks, nothing. And when it comes to code, _nothing_ is better than something.
+
+It works because browsers can download, parse, and style custom or “unknown” HTML tags like normal tags and we think they’re a great approach to building micro components.
 
 Here’s what a few others would look like:
 ```
@@ -96,13 +98,13 @@ v2, uitk-badge becomes a WebComponent and exposes more functionality:
 <!-- Valid WebComponent, still works, no impact after v2 is released -->
 <uitk-badge count="1"></uitk-badge>
 
-<!-- Begin using new API if desired -->
+// Begin using new API if desired
 badge.updateCount(2);
 badge.clear();
 ```
 Are you starting to see the value here?
 
-One other nice benefit is all your existing tooling still works: syntax highlighting, Emmet (hope you’re using it!), other IDE tools, testing tools, and all browsers’ developer tools (no Chrome-only plugins required like some libraries).
+One other nice benefit is all your existing tooling still works: syntax highlighting, Emmet (hope you’re using it!), other IDE features, testing tools, and all browsers’ developer tools (no Chrome-only plugins required like some libraries).
 
 In summary, we can create high-level component APIs using the most basic web technology – HTML – instead of over-engineering with the flavor-of-the-day.
 
