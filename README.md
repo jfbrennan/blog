@@ -24,7 +24,7 @@ React and some of the other libraries make it hard or impossible to scale down, 
 
 While rebuilding Alert with Polymer, Slim, and Riot I noticed that, despite me failing to write working JavaScript, the components still rendered. Broken, but the initial state rendered. I was intrigued and it got me thinking about how WebComponents (Polymer, Slim, and Riot are close to WebComponents) can server-render without Node since they’re real HTML…
 
-![gif](http://media.giphy.com/media/y3QOvy7xxMwKI/giphy.gif)
+![gif](giphy.gif)
 
 And if they render without working JavaScript, then they’d certainly render with no JavaScript at all, which means we’re back to basic HTML and CSS, but with the look of a true component. Except it wouldn’t be a React component or even a WebComponent – it’d simply be a custom HTML tag.
 
