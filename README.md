@@ -1,14 +1,14 @@
 ## &lt;uitk-loader&gt; and Custom HTML Tags
 
 # Intro
-Product Design recently spec’ed a new version of the UITK Loader and since we had just finished The View Showdown (more on that in a future post), we were curious to see how it could be built with one of the newer view libraries like React.
+Product Design recently asked for a new version of the UITK Loader and since we had just finished The View Showdown (more on that in a future post), we were curious to see how it could be built with one of the newer view libraries like React.
 
 We already rebuilt UITK Alert with these libraries as a POC, so we knew what it took for a medium-sized component, but we hadn’t tried to create a small component like Loader. It became apparent that the solution in every case would unfortunately be over-engineered.
 
 ## Over-engineering On the Rise
 This is what the JavaScript world looks like to me:
 
--image-
+![Image](src)
 
 Hyper. Chaotic. Like an insatiable mutt running back and forth revisiting places like its never been there before.
 
@@ -25,7 +25,7 @@ React and some of the other libraries make it hard or impossible to scale down, 
 
 While rebuilding Alert with Polymer, Slim, and Riot I noticed that, despite me failing to write working JavaScript, the components still rendered. Broken, but the initial state rendered. I was intrigued and it got me thinking about how WebComponents (Polymer, Slim, and Riot are close to WebComponents) can server-render without Node since they’re real HTML…
 
--image-
+![Image](src)
 
 And if they render without working JavaScript, then they’d certainly render with no JavaScript at all, which means we’d be back to basic HTML and CSS, but with the look of a true component. Except it wouldn’t be a React component or even a WebComponent – it’d simply be a custom HTML tag.
 
@@ -41,6 +41,22 @@ This replaces the older Loader implementation, which looked like:
 <span class="loader"></span>
 ```
 This new tag approach is just HTML. Really, plain old HTML. There’s no 3rd-party library or polyfill to download, no UITK magic or Handlebars abstraction, no hacks, nothing. It’s a custom or “unknown” HTML tag and browsers will download, parse, and style them like normal tags and we think they’re a great approach to these micro components.
+
+Here’s what a few others would look like:
+```
+<uitk-box>...</uitk-box>
+<uitk-row>...</uitk-row>
+<uitk-icon></uitk-icon>
+```
+No doubt you’ve noticed two differences here compared to current UITK: prefixed tag names and no classes.
+
+Prefixed tags are required for WebComponents, but not custom tags. We’re going to follow this rule anyway because it’s a good practice and will make it possible for a custom tag to grow up and become a real WebComponent while still remaining backwards-compatible, and the prefix stands out nicely when looking at code, “That’s clearly a UITK component right there!”
+
+Classes are good, but custom tags are just…better. Some differences between custom tags and their benefits compared to classes include:
+
+**Easily identifiable tag** It can be hard to distinguish your app’s code from UITK’s (even with a uitk prefix):
+
+
 
 ```markdown
 Syntax highlighted code block
