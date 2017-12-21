@@ -14,9 +14,10 @@ Hyper. Chaotic. Like an insatiable mutt running back and forth revisiting places
 
 The view space is no exception (probably the worst). The trouble with these new libraries is when you have something that isn’t a component, something like UITK’s Loader. It’s definitely a UI “thing”, it has a unique identity and purpose, but it doesn’t really do anything, not anything substantial. Loader is like a micro component.
 
-In a React app you “component all the things!” so a Loader would be definitely be done as React component (numerous examples online, BEX included). No one in the React community frowns upon 10, 20, or 60 lines (seriously.) of JavaScript just to produce a single <span>, which is all a Loader is. There’s even a special React API for these “pure” components and like cocaine, the "pure" version is even more dangerous!
+In a React app you “component all the things!” so a Loader would be definitely be done as React component (numerous examples online, BEX included). No one in the React community frowns upon 10, 20, or 60 lines (true story) of JavaScript just to produce a single <span>, which is all a Loader is. There’s even a special React API for these “pure” components and like cocaine, the "pure" version is even more dangerous!
   
-_“Just say NO to ~~drugs~~ over-engineering!”_
+  
+#### _“Just say NO to ~~drugs~~ over-engineering!”_
 
 -McGruff, the Engineering Dog
 
