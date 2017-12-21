@@ -95,7 +95,7 @@ Classes are good, but custom tags are just…better. Some differences between cu
 ```html
 <uitk-badge count="1"></uitk-badge>
 ```
-🏆 _Bonus points if you leave a comment explaining how Badge’s count displays without JavaScript_
+🏆 ##### _Bonus points if you leave a comment explaining how Badge’s count displays without JavaScript_
 
 That same example above could easily evolve into a WebComponent without requiring any refactoring. Check it out:
 
@@ -103,7 +103,7 @@ v1, custom tag:
 ```html
 <uitk-badge count="1"></uitk-badge>
 ```
-v2, uitk-badge becomes a WebComponent and exposes more functionality:
+v2, `uitk-badge` becomes a WebComponent and exposes more functionality:
 ```html
 <!-- Valid WebComponent, still works, no impact after v2 is released -->
 <uitk-badge count="1"></uitk-badge>
