@@ -1,8 +1,9 @@
-## Welcome to GitHub Pages
+## <uitk-loader> and Custom HTML Tags
 
-You can use the [editor on GitHub](https://github.com/jfbrennan/blog/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+# Intro
+Product Design recently spec’ed a new version of the UITK Loader and since we had just finished The View Showdown (more on that in a future post), we were curious to see how it could be built with one of the newer view libraries like React.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+We already rebuilt UITK Alert with these libraries as a POC, so we knew what it took for a medium-sized component, but we hadn’t tried to create a small component like Loader. It became apparent that the solution in every case would unfortunately be over-engineered.
 
 ### Markdown
 
