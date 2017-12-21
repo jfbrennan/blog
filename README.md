@@ -58,6 +58,7 @@ No doubt you’ve noticed two differences here compared to current UITK:
 
 prefixed tag names and no classes
 
+
 Prefixed tags are required for WebComponents, but not custom tags. We’re going to follow this rule anyway because it’s a good practice and will make it possible for a custom tag to grow up and become a real WebComponent while still remaining backwards-compatible, and the prefix stands out nicely when looking at code, “That’s clearly a UITK component right there!”
 
 Classes are good, but custom tags are just…better. Some differences between custom tags and their benefits compared to classes include:
@@ -106,7 +107,8 @@ v2, uitk-badge becomes a WebComponent and exposes more functionality:
 ```html
 <!-- Valid WebComponent, still works, no impact after v2 is released -->
 <uitk-badge count="1"></uitk-badge>
-
+```
+```javascript
 // Begin using new API if desired
 badge.updateCount(2);
 badge.clear();
