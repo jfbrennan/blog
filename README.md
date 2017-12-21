@@ -16,7 +16,7 @@ The trouble comes when you’re using one of these new libraries and you have so
 
 In the React world you “component all the things!” so a Loader would be done in React (numerous examples online, BEX as well). No one in the React community frowns upon 10, 20, or 60 lines (seriously.) of JavaScript just to produce a single <span>, which is what Loader is. There’s even a special React API for these “pure” components. This is not good.
 
-_“Just say NO to drugs over-engineering!”_
+_“Just say NO to ~~drugs over~~ engineering!”_
 
 -McGruff, the Engineering Dog
 
