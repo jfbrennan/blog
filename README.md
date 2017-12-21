@@ -33,9 +33,11 @@ And if they render without working JavaScript, then they’d certainly render wi
 Now that we’re IE11+ it makes a lot of sense to consider custom HTML tags.
 
 You’ll soon see an example of our first custom tag on the Doc Site:
+
 `<uitk-loader></uitk-loader>`
 
 This replaces the older Loader implementation, which looked like:
+
 `<span class="loader"></span>`
 
 This new tag approach is just HTML. There’s no 3rd-party library or polyfill to download, no UITK magic or Handlebars abstraction, no hacks, nothing. And when it comes to code, _nothing_ is better than something.
