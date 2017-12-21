@@ -110,7 +110,6 @@ v2, `uitk-badge` becomes a WebComponent and exposes more functionality:
 ```
 ```javascript
 // Begin using new API if desired
-badge.updateCount(2);
 badge.clear();
 ```
 Are you starting to see the value here?
