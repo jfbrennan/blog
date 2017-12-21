@@ -1,5 +1,3 @@
-# &lt;uitk-loader&gt; and Custom HTML Tags
-
 ## Intro
 Product Design recently asked for a new version of the UITK Loader and since we had just finished The View Showdown (more on that in a future post), we were curious to see how it could be built with one of the newer view libraries.
 
