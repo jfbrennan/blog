@@ -6,7 +6,7 @@ We already rebuilt UITK Alert with these libraries as a POC, so we knew what it 
 ### Over-engineering On the Rise
 This is what the JavaScript world looks like to me:
 
-![gif](https://media.giphy.com/media/zZY5PFxJH03Sg/giphy.gif)
+![gif](giphy-downsized-large.gif)
 
 Hyper. Chaotic. Like an insatiable mutt running back and forth revisiting places like its never been there before. 
 
