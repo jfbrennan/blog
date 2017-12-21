@@ -1,13 +1,46 @@
-## <uitk-loader> and Custom HTML Tags
+## &lt;uitk-loader&gt; and Custom HTML Tags
 
 # Intro
 Product Design recently spec’ed a new version of the UITK Loader and since we had just finished The View Showdown (more on that in a future post), we were curious to see how it could be built with one of the newer view libraries like React.
 
 We already rebuilt UITK Alert with these libraries as a POC, so we knew what it took for a medium-sized component, but we hadn’t tried to create a small component like Loader. It became apparent that the solution in every case would unfortunately be over-engineered.
 
-### Markdown
+## Over-engineering On the Rise
+This is what the JavaScript world looks like to me:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+-image-
+
+Hyper. Chaotic. Like an insatiable mutt running back and forth revisiting places like its never been there before.
+
+The trouble comes when you’re using one of these new libraries and you have something that isn’t a component, something like UITK’s Loader. It’s definitely a UI “thing”, it has a unique identity and purpose, but it doesn’t really do anything, not anything substantial. Loader is like a micro component.
+
+In the React world you “component all the things!” so a Loader would be done in React (numerous examples online, BEX as well). No one in the React community frowns upon 10, 20, or 60 lines (seriously.) of JavaScript just to produce a single <span>, which is what Loader is. There’s even a special React API for these “pure” components. This is not good.
+
+_“Just say NO to drugs over-engineering!”_
+
+-McGruff, the Engineering Dog
+
+## Scaling Down
+React and some of the other libraries make it hard or impossible to scale down, so what do we do then for Loader?
+
+While rebuilding Alert with Polymer, Slim, and Riot I noticed that, despite me failing to write working JavaScript, the components still rendered. Broken, but the initial state rendered. I was intrigued and it got me thinking about how WebComponents (Polymer, Slim, and Riot are close to WebComponents) can server-render without Node since they’re real HTML…
+
+-image-
+
+And if they render without working JavaScript, then they’d certainly render with no JavaScript at all, which means we’d be back to basic HTML and CSS, but with the look of a true component. Except it wouldn’t be a React component or even a WebComponent – it’d simply be a custom HTML tag.
+
+# Custom HTML Tags
+Now that we’re IE11+ it makes a lot of sense to consider custom HTML tags.
+
+You’ll soon see an example of our first custom tag on the Doc Site:
+```
+<uitk-loader></uitk-loader>
+```
+This replaces the older Loader implementation, which looked like:
+```
+<span class="loader"></span>
+```
+This new tag approach is just HTML. Really, plain old HTML. There’s no 3rd-party library or polyfill to download, no UITK magic or Handlebars abstraction, no hacks, nothing. It’s a custom or “unknown” HTML tag and browsers will download, parse, and style them like normal tags and we think they’re a great approach to these micro components.
 
 ```markdown
 Syntax highlighted code block
