@@ -41,7 +41,7 @@ This new tag approach is just HTML. There’s no 3rd-party library or polyfill t
 It works because browsers can download, parse, and style custom or “unknown” HTML tags like normal tags and we think they’re a great approach to building micro components.
 
 Here’s what a few others would look like:
-```
+```html
 <uitk-box>...</uitk-box>
 <uitk-row>...</uitk-row>
 <uitk-icon></uitk-icon>
@@ -54,7 +54,7 @@ Prefixed tags are required for WebComponents, but not custom tags. We’re going
 Classes are good, but custom tags are just…better. Some differences between custom tags and their benefits compared to classes include:
 
 **Easily identifiable tag** It can be hard to distinguish your app’s code from UITK’s (even with a uitk prefix):
-```
+```html
 <div id="foo" class="bar box baz">...</div>
 <div id="foo" class="bar uitk-box baz">...</div>
 
@@ -63,7 +63,7 @@ Classes are good, but custom tags are just…better. Some differences between cu
 <uitk-box id="foo" class="bar baz">...</uitk-box>
 ```
 **Improved semantics** Custom tags really communicate a strong meaning and make for easier testing:
-```
+```html
 <!-- Bad --> 
 <div class="content-container-class">...</div> 
 
@@ -74,7 +74,7 @@ Classes are good, but custom tags are just…better. Some differences between cu
 <uitk-box>...</uitk-box>
 ```
 **Cleaner code and a clear API:**
-```
+```html
 <i class="icon icon-traveler"></i> 
 
 <!-- vs. --> 
@@ -82,7 +82,7 @@ Classes are good, but custom tags are just…better. Some differences between cu
 <uitk-icon name="traveler"></uitk-icon>
 ```
 **Custom attributes** really open up a lot of possibilities:
-```
+```html
 <uitk-badge count="1"></uitk-badge>
 ```
 🏆 _Bonus points if you leave a comment explaining how Badge’s count displays without JavaScript_
@@ -90,11 +90,11 @@ Classes are good, but custom tags are just…better. Some differences between cu
 That same example above could easily evolve into a WebComponent without requiring any refactoring. Check it out:
 
 v1, custom tag:
-```
+```html
 <uitk-badge count="1"></uitk-badge>
 ```
 v2, uitk-badge becomes a WebComponent and exposes more functionality:
-```
+```html
 <!-- Valid WebComponent, still works, no impact after v2 is released -->
 <uitk-badge count="1"></uitk-badge>
 
