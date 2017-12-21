@@ -32,9 +32,11 @@ And if they render without working JavaScript, then they’d certainly render wi
 # Custom HTML Tags
 Now that we’re IE11+ it makes a lot of sense to consider custom HTML tags.
 
-You’ll soon see an example of our first custom tag on the Doc Site: `<uitk-loader></uitk-loader>`
+You’ll soon see an example of our first custom tag on the Doc Site:
+`<uitk-loader></uitk-loader>`
 
-This replaces the older Loader implementation, which looked like: `<span class="loader"></span>`
+This replaces the older Loader implementation, which looked like:
+`<span class="loader"></span>`
 
 This new tag approach is just HTML. There’s no 3rd-party library or polyfill to download, no UITK magic or Handlebars abstraction, no hacks, nothing. And when it comes to code, _nothing_ is better than something.
 
@@ -111,26 +113,6 @@ In summary, we can create high-level component APIs using the most basic web tec
 # So then, what about all those view libraries?
 
 
-
-
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
