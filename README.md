@@ -1,11 +1,11 @@
-## &lt;uitk-loader&gt; and Custom HTML Tags
+# &lt;uitk-loader&gt; and Custom HTML Tags
 
-# Intro
+## Intro
 Product Design recently asked for a new version of the UITK Loader and since we had just finished The View Showdown (more on that in a future post), we were curious to see how it could be built with one of the newer view libraries.
 
 We already rebuilt UITK Alert with these libraries as a POC, so we knew what it took for a medium-sized component, but we hadn’t tried to create a small component like Loader. It became apparent that the solution in every case would unfortunately be over-engineered.
 
-## Over-engineering On the Rise
+### Over-engineering On the Rise
 This is what the JavaScript world looks like to me:
 
 ![Image](src)
@@ -17,11 +17,11 @@ The view space is no exception; it's probably the worst right now. The trouble w
 In a React app you “component all the things!”, so a Loader would be definitely be done as React component (numerous examples online, BEX included). No one in the React community frowns upon 10, 20, or 60 lines (true story) of JavaScript just to produce a single <span>, which is all a Loader is. There’s even a special React API for these “pure” components and like cocaine, the "pure" version is even more dangerous!
   
   
-#### _“Just say NO to ~~drugs~~ over-engineering!”_
+##### _“Just say NO to ~~drugs~~ over-engineering!”_
 
 -McGruff, the Engineering Dog
 
-## Scaling Down
+### Scaling Down
 React and some of the other libraries make it hard or impossible to scale down, so what do we do then for Loader?
 
 While rebuilding Alert with Polymer, Slim, and Riot I noticed that, despite me failing to write working JavaScript, the components still rendered. Broken, but the initial state rendered. I was intrigued and it got me thinking about how WebComponents (Polymer, Slim, and Riot are close to WebComponents) can server-render without Node since they’re real HTML…
@@ -30,7 +30,7 @@ While rebuilding Alert with Polymer, Slim, and Riot I noticed that, despite me f
 
 And if they render without working JavaScript, then they’d certainly render with no JavaScript at all, which means we’re back to basic HTML and CSS, but with the look of a true component. Except it wouldn’t be a React component or even a WebComponent – it’d simply be a custom HTML tag.
 
-# Custom HTML Tags
+## Custom HTML Tags
 Now that we’re IE11+ it makes a lot of sense to consider custom HTML tags.
 
 You’ll soon see an example of our first custom tag on the Doc Site:
@@ -96,7 +96,7 @@ Classes are good, but custom tags are just…better. Some differences between cu
 ```html
 <uitk-badge count="1"></uitk-badge>
 ```
-🏆 ##### _Bonus points if you leave a comment explaining how Badge’s count displays without JavaScript_
+🏆 ###### _Bonus points if you leave a comment explaining how Badge’s count displays without JavaScript_
 
 That same example above could easily evolve into a WebComponent without requiring any refactoring. Check it out:
 
@@ -119,7 +119,7 @@ One other nice benefit is all your existing tooling still works: syntax highligh
 
 In summary, we can create high-level component APIs using the most basic web technology – HTML – instead of over-engineering with the flavor-of-the-day.
 
-# So then, what about all those view libraries?
+## So then, what about all those view libraries?
 
 
 
