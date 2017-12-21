@@ -16,7 +16,7 @@ The trouble comes when you’re using one of these new libraries and you have so
 
 In the React world you “component all the things!” so a Loader would be done in React (numerous examples online, BEX as well). No one in the React community frowns upon 10, 20, or 60 lines (seriously.) of JavaScript just to produce a single <span>, which is what Loader is. There’s even a special React API for these “pure” components. This is not good.
 
-_“Just say NO to ~~drugs over~~ engineering!”_
+_“Just say NO to ~~drugs~~ over-engineering!”_
 
 -McGruff, the Engineering Dog
 
@@ -55,6 +55,49 @@ Prefixed tags are required for WebComponents, but not custom tags. We’re going
 Classes are good, but custom tags are just…better. Some differences between custom tags and their benefits compared to classes include:
 
 **Easily identifiable tag** It can be hard to distinguish your app’s code from UITK’s (even with a uitk prefix):
+```
+<div id="foo" class="bar box baz">...</div>
+<div id="foo" class="bar uitk-box baz">...</div>
+
+<!-- vs. -->
+
+<uitk-box id="foo" class="bar baz">...</uitk-box>
+```
+**Improved semantics** Custom tags really communicate a strong meaning and make for easier testing:
+```
+<!-- Bad --> 
+<div class="content-container-class">...</div> 
+
+<!-- Good --> 
+<div class="box">...</div> 
+
+<!-- Even better --> 
+<uitk-box>...</uitk-box>
+Cleaner code and a clear API:
+```
+<i class="icon icon-traveler"></i> 
+
+<!-- vs. --> 
+
+<uitk-icon name="traveler"></uitk-icon>
+```
+Custom attributes really open up a lot of possibilities:
+```
+<uitk-badge count="1"></uitk-badge>
+```
+🏆 Bonus points if you leave a comment explaining how Badge’s count displays without JavaScript
+
+That same example above could easily evolve into a WebComponent without requiring any refactoring. Check it out:
+
+v1, custom tag:
+```
+<uitk-badge count="1"></uitk-badge>
+```
+
+
+
+
+
 
 
 
